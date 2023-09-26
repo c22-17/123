@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розклад навчальної групи 18.09 - 22.09</title>
+    <style>
+	     
+        table {
+            border-collapse: collapse;
+            width: 200px;
+			margin: auto;
+			text-align: center;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+		.sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 210px;
+			height: 100%;
+            background: linear-gradient(#f0f0f0, #c0c0c0);
+            padding: 25px;
+        }  
+        .sidebar input {
+            width: 180px;
+            margin-bottom: 8px;
+            padding: 6px;
+        }
+		h2 {
+            border-bottom: 4px solid #006400;
+            padding-bottom: 10px; 
+			text-align: center;
+			color: #006400
+			}
+
+    </style>
+</head>
+<body>
+
+      <div id="header" align="center">
+            <img src="http://epi.kpi.ua/Img/logo.gif" align="middle" style="border-width:0px;" />
+			</div>
+		<div class="sidebar">
+        <h1>Форма реєстрації</h1>
+        <form onsubmit="return validateForm()" action="/до_якого_маршруту_відправляти_дані" method="post">
+            <label for="first_name">Ім'я:</label>
+            <input type="text" id="first_name" name="first_name" required><br>
+
+            <label for="last_name">Прізвище:</label>
+            <input type="text" id="last_name" name="last_name" required><br>
+
+            <label for="email">Пошта:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required><br>
+			
+            <label for="confirm_password">Підтвердіть пароль:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required><br>
+
+            <input type="submit" value="Зареєструватися">
+        </form>
+    </div>
+    <h2>Розклад навчальної групи 18.09 - 22.09</h2>
+	
+    <table>
+        <tr>
+            <th>Година</th>
+            <th>Понеділок</th>
+            <th>Вівторок</th>
+            <th>Середа</th>
+            <th>Четвер</th>
+            <th>П'ятниця</th>
+        </tr>
+        <tr>
+            <td>8:30 - 10:05</td>
+            <td>Право</td>
+            <td>Програмування</td>
+            <td>Сампо</td>
+            <td>Фізичне виховання</td>
+            <td>ТІК</td>
+        </tr>
+        <tr>
+            <td>10:25 - 12:00</td>
+            <td>ТІМ</td>
+            <td>Іноземна мова</td>
+            <td>ТС</td>
+            <td>ЗВП</td>
+            <td>Сампо</td>
+        </tr>
+         <tr>
+            <td>12:20 - 13:55</td>
+            <td>Іноземна мова</td>
+            <td>Сампо</td>
+            <td>ТІМ</td>
+            <td>Програмування</td>
+            <td>Право</td>
+        </tr>
+		 <tr>
+            <td>16:10 - 17:45</td>
+            <td>ТІК</td>
+            <td>ТС</td>
+            <td>ЗВП</td>
+            <td>Сампо</td>
+            <td>Фізичне виховання</td>
+        </tr>
+    </table>
+	<script>
+        function validateForm() {
+            var firstName = document.getElementById("first_name").value;
+            var lastName = document.getElementById("last_name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+			var confirm_password = document.getElementById("confirm_password").value;
+
+            if (firstName == "" || lastName == "" || email == "" || password == "" || confirm_password == "") {
+                alert("Будь ласка, заповніть всі поля.");
+				return false; }
+			if (password !== confirm_password) {
+                alert("Паролі не співпадають!");
+                return false;
+            }
+
+            return true;
+             
+        }
+    </script>
+</body>
+</html>
