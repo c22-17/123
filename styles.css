@@ -1,0 +1,26 @@
+
+.font-formatting {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.text-formatting {
+    color: #0000FF;
+    text-align: center;
+	list-style-position: inside;
+    line-height: 1.5;
+}
+
+.spacing {
+    padding: 20px;
+    margin: 10px;
+	background-color: #f0f0f0;
+}
+
+.border {
+    border-style: dotted;
+    border-color: #EE0000;
+    border-width: 2px;
+    border-radius: 10px;
+}
