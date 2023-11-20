@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="myButton">Натискай мене</button>
+
+<div id="output"></div>
+
+<script>
+  const myElement = document.getElementById('myButton');
+  const outputDiv = document.getElementById('output');
+
+  myElement.addEventListener('click', () => {
+    outputDiv.innerHTML += 'Подія виникла!<br>';
+  });
+
+  myElement.addEventListener('click', () => {
+  outputDiv.innerHTML += 'Це один обробник події!<br>';
+  });
+</script>
+
+</body>
+</html>

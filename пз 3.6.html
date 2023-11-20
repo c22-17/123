@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head> <meta name="viewport" content="width=device-width, initial-scale=1.0"> </head>
+<body>
+<p> Event in JavaScript</p>
+<button type="button"
+onclick='document.getElementById("MyButton").innerHTML = "Кнопка була натиснута!"'>Click Me!</button>
+<p id="MyButton"></p>
+
+<input placeholder="Click here, then press down a key."/>
+<p id="log"></p>
+
+<input id="myTextField" />
+<input type="button" onclick="getfocus()" value="Get focus">
+<input type="button" onclick="losefocus()" value="Lose focus">
+
+
+<script>
+	const input = document.querySelector("input");
+    const log = document.getElementById("log");
+
+input.addEventListener("keydown", logKey);
+
+function logKey(e) {
+  log.textContent += ` ${e.code}`;
+}
+
+  document.getElementById("getfocus").addEventListener("click", () => {
+  document.getElementById("myTextField").focus();
+  console.log("Елемент отримав фокус!");
+});
+document.getElementById("losefocus").addEventListener("click", () => {
+  document.getElementById("myTextField").focus();
+  console.log("Елемент втратив фокус!");
+});
+
+  window.addEventListener('load', (event) => {
+    console.log('Документ повністю завантажено!');
+  });
+
+
+</script>
+</body>
+</html> 
