@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+	    body {
+		   display: flex;
+           align-items: center;
+			justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+		
+		  #container {
+            text-align: center;
+            border: 2px solid #333;
+            padding: 20px;
+            width: 90%;
+			}
+			
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>JavaScript</h1>
+        <p class="paragraph">This is a paragraph.</p>
+        <ul>
+            <ol class="list-item">List item 1</ol>
+            <ol class="list-item">List item 2</ol>
+            <ol class="list-item">List item 3</ol>
+        </ul>
+        <a href="#" id="link">Click me!</a>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        container.style.border = '2px solid #333';
+
+        const listItems = document.querySelectorAll('.list-item');
+        listItems.forEach(item => {
+            item.style.fontWeight = 'bold';
+        });
+
+        const link = document.getElementById('link');
+        link.href = 'https://allthatsinteresting.com/tag/news';
+
+        console.log('Parent node of paragraph:', paragraph.parentNode);
+        console.log('Children of container:', container.children);
+
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            container.classList.toggle('highlight');
+        });
+    </script>
+
+</body>
+</html>
